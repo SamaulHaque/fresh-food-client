@@ -1,9 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const {logIn, LoginWithGoogle} = useContext(AuthContext)
+  const googleProvider = new GoogleAuthProvider();
+  const navigate = useNavigate()
+
   const handelLogin = event => {
     event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    logIn(email, password)
+    .then(() => {
+      form.reset();
+      navigate('/')
+      setSuccess('Login Successfully.')
+      setError('')
+
+    })
+    .catch(error => {
+      console.error(error)
+      setSuccess('')
+      setError(error.message)
+
+    })
+  }
+
+  const handelGoogleLogin = () => {
+    LoginWithGoogle(googleProvider)
+    .then(() => {
+      navigate('/')
+
+    })
+    .catch(error => console.error(error))
   }
     return (
       <div>
@@ -17,7 +53,7 @@ const Login = () => {
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input type="text" name='email' placeholder="Email" className="input input-bordered w-full" />
+              <input type="email" name='email' placeholder="Email" className="input input-bordered w-full" />
             </div>
             <div className="form-control">
               <label className="label">
@@ -31,9 +67,10 @@ const Login = () => {
           </form>
 
           <div className='my-3'>
-            <button className="btn btn-outline btn-warning w-full">Login with google</button>
+            <button onClick={handelGoogleLogin} className="btn btn-outline btn-warning w-full">Login with google</button>
           </div>
-
+          <p className='text-red-600'>{error}</p>
+          <p className='text-green-600'>{success}</p>
           <p>New to fresh food? <Link className='text-blue-600' to='/register'>Register</Link></p>
         </div>
       </div>
