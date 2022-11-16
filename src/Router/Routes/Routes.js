@@ -6,6 +6,7 @@ import Register from "../../pages/Register/Register";
 import ServicesDetails from "../../pages/Shared/ServicesDetails/ServicesDetails";
 import Services from "../../pages/Shared/Services/Services";
 import Reviews from "../../pages/Reviews/Reviews";
+import MyReviews from "../../pages/MyReviews/MyReviews";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
                 path: '/reviews',
                 element: <Reviews></Reviews>,
                 loader: () => fetch('http://localhost:5000/reviews')
+            },
+            {
+                path: '/myreviews',
+                element: <MyReviews></MyReviews>
             }
         ]
         

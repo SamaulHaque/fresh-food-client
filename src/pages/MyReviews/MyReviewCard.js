@@ -1,7 +1,8 @@
 import React from 'react';
 
-const ReviewCard = ({review}) => {
+const MyReviewCard = ({review}) => {
     const {name, image, message} = review;
+
     return (
         <div className='flex justify-between'>
             <div className='border p-4 w-full'>
@@ -17,4 +18,4 @@ const ReviewCard = ({review}) => {
     );
 };
 
-export default ReviewCard;
+export default MyReviewCard;
