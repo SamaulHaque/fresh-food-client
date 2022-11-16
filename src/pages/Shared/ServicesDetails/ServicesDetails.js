@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import Reviews from '../../Reviews/Reviews';
 import AddReview from './AddReview';
 
 const ServicesDetails = () => {
@@ -16,10 +17,16 @@ const ServicesDetails = () => {
             </div>
         </div>
 
+        {/* all reviews section start here */}
+        <div className='mt-12 text-center font-bold'>
+            <Link className='btn btn-outline' to='/reviews'>Click here to see all Reviews</Link>
+        </div>
+    
+         {/* add review section start here */}
         <div>
             <AddReview></AddReview>
         </div>
-        </div>
+      </div>
     );
 };
 
