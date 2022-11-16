@@ -16,7 +16,8 @@ const Header = () => {
     const menuItems = <>
         <li className='font-semibold mr-3'><Link to='/'>Home</Link></li>
         <li className='font-semibold mr-3'><Link to='/services'>My Services</Link></li>
-        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
+        
+        
     </>
     return (
         <div className="navbar bg-base-100">
@@ -27,6 +28,16 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {menuItems}
+                        {
+                            user?.uid ?
+                             <>
+                             <li className='font-semibold mr-3'><Link to='/my-reviews'>My Reviews</Link></li>
+                             <li className='font-semibold mr-3'><Link to='/add-service'>Add Service</Link></li>
+                             </> : 
+                             <>
+                             </>
+                        }
+                        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
                 <Link to='/'>
@@ -36,6 +47,17 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
+                    {
+                            user?.uid ?
+                             <>
+                             <li className='font-semibold mr-3'><Link to='/my-reviews'>My Reviews</Link></li>
+                             <li className='font-semibold mr-3'><Link to='/add-service'>Add Service</Link></li>
+                             </> : 
+                             <>
+                             </>
+                        }
+
+                        <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
                 </ul>
             </div>
 

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import Reviews from '../../Reviews/Reviews';
 import AddReview from './AddReview';
 
 const ServicesDetails = () => {
+    const {user} = useContext(AuthContext);
     const service = useLoaderData();
     const {title, img, price} = service;
 
@@ -19,12 +21,24 @@ const ServicesDetails = () => {
 
         {/* all reviews section start here */}
         <div className='mt-12 text-center font-bold'>
-            <Link className='btn btn-outline' to='/reviews'>Click here to see all Reviews</Link>
+        <h2 className='text-center text-3xl font-bold mb-6' >See All Reviews</h2>
+            <Link className='btn' to='/reviews'>Click here to see all Reviews</Link>
         </div>
     
          {/* add review section start here */}
         <div>
-            <AddReview></AddReview>
+            {
+                user?.uid ?
+                <>
+                <AddReview></AddReview>
+                </> :
+                <>
+                <div className='text-center mt-12'>
+                    <h2 className='text-center text-3xl font-bold mb-6' >Please Login to Add Review.</h2>
+                    <Link className='btn' to='/login'>Log In</Link>
+                </div>
+                </>
+            }
         </div>
       </div>
     );

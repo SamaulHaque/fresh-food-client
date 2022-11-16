@@ -8,7 +8,7 @@ const ReviewCard = ({review}) => {
                 <h2>{name}</h2>
             </div>
             <div className='border p-4 w-full'>
-                <img className='w-32' src={image} alt="user-img" />
+                <img className='w-16 rounded' src={image} alt="user-img" />
             </div>
             <div className='border p-4 w-full'>
                 <p>{message}</p>
