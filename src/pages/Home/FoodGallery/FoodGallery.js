@@ -11,7 +11,8 @@ const FoodGallery = () => {
         <div className='mt-4 mx-3 my-8'>
             <h2 className='text-center text-3xl font-bold'>Fresh Food Gallery</h2>
             <p className='text-center font-semibold'>See my food gallery and choose food  first and then <br />  order your favorite food.</p>
-            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-8'>
+
+            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
             <img className='w-full h-60' src={food1} alt="" />
             <img className='w-full h-60' src={food2} alt="" />
             <img className='w-full h-60' src={food3} alt="" />
