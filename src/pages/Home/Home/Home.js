@@ -11,7 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <Services></Services>
             <div className='text-center mt-8'>
-            <Link to='/services'><button className='btn btn-outline' >See All Services</button></Link>
+            <Link to='/my-all-services'><button className='btn btn-outline' >See All Services</button></Link>
             </div>
             <WhyChoose></WhyChoose>
             <FoodGallery></FoodGallery>
