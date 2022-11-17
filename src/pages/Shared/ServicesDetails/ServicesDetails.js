@@ -1,21 +1,24 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
-import Reviews from '../../Reviews/Reviews';
 import AddReview from './AddReview';
 
 const ServicesDetails = () => {
     const {user} = useContext(AuthContext);
     const service = useLoaderData();
-    const {title, img, price} = service;
+    const { title, img, price, description} = service;
 
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 shadow-xl mt-3">
             <figure><img className='w-full' src={img} alt="" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <p>{price}</p>
+                <h2 className="card-title text-2xl font-bold">{title}</h2>
+                <p className='text-xl font-bold'>Price: ${price}</p>
+                <p className='text-justify'>
+                    {description}
+                    
+                </p>
             </div>
         </div>
 

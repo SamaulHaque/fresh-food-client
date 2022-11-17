@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyReviewCard = ({review, handleDelete}) => {
     const {_id, name, image, message} = review;
@@ -17,7 +18,10 @@ const MyReviewCard = ({review, handleDelete}) => {
                 <p>{message}</p>
             </div>
             <div className='border p-4 w-full'>
-                <button onClick={() => handleDelete(_id)} className='btn btn-error btn-outline btn-sm'>Delete</button>
+                <button onClick={() => handleDelete(_id)} className='btn btn-error btn-outline btn-sm mr-3'>Delete</button>
+                <Link to={`/update/${_id}`}>
+                <button className='btn btn-warning btn-outline btn-sm'>Edit</button>
+                </Link>
             </div>
         </div>
     );

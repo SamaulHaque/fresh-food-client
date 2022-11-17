@@ -30,6 +30,7 @@ const AddReview = () => {
         .then(res => res.json())
         .then(data => {
             if(data.acknowledged > 0){
+                alert('Review Added Successfully.')
                 form.reset();
             }
         })

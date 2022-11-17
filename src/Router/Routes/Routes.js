@@ -8,6 +8,7 @@ import Services from "../../pages/Shared/Services/Services";
 import Reviews from "../../pages/Reviews/Reviews";
 import MyReviews from "../../pages/MyReviews/MyReviews";
 import AddService from "../../pages/AddService/AddService";
+import Update from "../../pages/Update/Update";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -51,9 +52,15 @@ const router = createBrowserRouter([
                 element: <MyReviews></MyReviews>
             },
             {
+                path: '/update/:id',
+                element: <Update></Update>,
+                loader: ({params}) => fetch(`http://localhost:5000/my-reviews/${params.id}`)
+            },
+            {
                 path: '/add-service',
                 element: <AddService></AddService>
-            }
+            },
+            
         ]
         
     }
