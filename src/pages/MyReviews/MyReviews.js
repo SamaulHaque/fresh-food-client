@@ -9,7 +9,7 @@ const MyReviews = () => {
     const [reviews, setReviews] = useState([])
     
     useEffect(() => {
-        fetch(`http://localhost:5000/my-reviews?email=${user?.email}`)
+        fetch(`https://fresh-food-server.vercel.app/my-reviews?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setReviews(data))
     },[user?.email])
@@ -17,7 +17,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const agree = window.confirm('Want to Delete?')
         if(agree){
-            fetch(`http://localhost:5000/my-reviews/${id}`, {
+            fetch(`https://fresh-food-server.vercel.app/my-reviews/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

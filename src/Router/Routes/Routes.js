@@ -45,12 +45,12 @@ const router = createBrowserRouter([
             {
                 path:'/services/:id',
                 element:<ServicesDetails></ServicesDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params}) => fetch(`https://fresh-food-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/reviews',
                 element: <Reviews></Reviews>,
-                loader: () => fetch('http://localhost:5000/reviews')
+                loader: () => fetch('https://fresh-food-server.vercel.app/reviews')
             },
             {
                 path: '/my-reviews',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/my-reviews/${params.id}`)
+                loader: ({params}) => fetch(`https://fresh-food-server.vercel.app/my-reviews/${params.id}`)
             },
             {
                 path: '/add-service',

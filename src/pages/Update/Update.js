@@ -16,7 +16,7 @@ const Update = () => {
 
         
 
-        fetch(`http://localhost:5000/my-reviews/${storedUser._id}`, {
+        fetch(`https://fresh-food-server.vercel.app/my-reviews/${storedUser._id}`, {
           method: 'PUT',
           headers: {
             'content-type': 'application/json'
