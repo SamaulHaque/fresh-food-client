@@ -1,5 +1,7 @@
-const AddService = () => {
+import useTitle from "../../hooks/useTitle";
 
+const AddService = () => {
+    useTitle('Add Service')
     const handelAddService = event => {
         event.preventDefault();
         const form = event.target;

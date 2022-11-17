@@ -4,8 +4,10 @@ import FoodGallery from '../FoodGallery/FoodGallery';
 import Services from '../../Shared/Services/Services';
 import WhyChoose from '../WhyChoose/WhyChoose';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div className='mb-12'>
             <Banner></Banner>
