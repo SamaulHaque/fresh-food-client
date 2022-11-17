@@ -15,8 +15,8 @@ const ServicesDetails = () => {
     
 
     return (
-        <div>
-            <div className="card card-compact w-full bg-base-100 shadow-xl mt-3">
+        <div className='mx-3'>
+            <div className="card card-compact w-full bg-base-100 shadow-xl mt-3 ">
             <PhotoProvider>
             <PhotoView  src={img}>
             <figure><img className='w-full' src={img} alt="" /></figure>

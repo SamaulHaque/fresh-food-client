@@ -42,7 +42,7 @@ const AddReview = () => {
     }
 
     return (
-        <div className='mt-12'>
+        <div className='mt-12 mx-3'>
             <h2 className='text-center text-3xl font-bold mb-6'>Please Add Your Review.</h2>
          <form onSubmit={handelAddReview}>
             <input type="text" name='name' defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered w-full mb-3" required/>

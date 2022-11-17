@@ -10,14 +10,16 @@ const Reviews = () => {
     const {user} = useContext(AuthContext)
     const reviews = useLoaderData();
     return (
-        <div className='mt-12'>
+        <div className='mt-12 mx-3'>
             <h2 className='text-center text-3xl font-bold mb-6'>All Reviews Here.</h2>
+            
             {
                 reviews.map(review => <ReviewCard
                 key={review._id}
                 review={review}
                 ></ReviewCard>)
             }
+    
             <div>
             {
                 user?.uid ?

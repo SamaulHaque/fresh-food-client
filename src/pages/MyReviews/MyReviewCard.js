@@ -7,7 +7,7 @@ const MyReviewCard = ({review, handleDelete}) => {
     
 
     return (
-        <div className='flex justify-between'>
+        <div className='grid grid-cols-3 sm:grid-cols-5'>
             <div className='border p-4 w-full'>
                 <img className='w-16 rounded' src={image} alt="user-img" />
             </div>
@@ -21,9 +21,9 @@ const MyReviewCard = ({review, handleDelete}) => {
                 <p>{rating} stars</p>
             </div>
             <div className='border p-4 w-full'>
-                <button onClick={() => handleDelete(_id)} className='btn btn-error btn-outline btn-sm mr-3'>Delete</button>
+                <button onClick={() => handleDelete(_id)} className='btn btn-error btn-outline btn-sm mr-3 mb-3 w-full'>Delete</button>
                 <Link to={`/update/${_id}`}>
-                <button className='btn btn-warning btn-outline btn-sm'>Edit</button>
+                <button className='btn btn-warning btn-outline btn-sm w-full'>Edit</button>
                 </Link>
             </div>
         </div>

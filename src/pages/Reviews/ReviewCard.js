@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewCard = ({review}) => {
     const {name, image, rating, message} = review;
     return (
-        <div className='flex justify-between'>
+        <div className='grid grid-cols-2 sm:grid-cols-4'>
            <div className='border p-4 w-full'>
                 <img className='w-16 rounded' src={image} alt="user-img" />
             </div>
