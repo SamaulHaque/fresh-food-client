@@ -34,7 +34,7 @@ const AddService = () => {
 
     }
     return (
-        <div className='mt-12'>
+        <div className='mt-3'>
             <h2 className='text-center text-3xl font-bold mb-6'>Add Service</h2>
          <form onSubmit={handelAddService}>
             <input type="text" name='name'  placeholder="Title" className="input input-bordered w-full mb-3" required/>

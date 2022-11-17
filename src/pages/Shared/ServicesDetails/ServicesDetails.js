@@ -1,19 +1,27 @@
 import React, { useContext } from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
 import AddReview from './AddReview';
+import 'react-photo-view/dist/react-photo-view.css';
+
 
 const ServicesDetails = () => {
     useTitle('My Service Details')
     const {user} = useContext(AuthContext);
     const service = useLoaderData();
     const { title, img, price, description} = service;
+    
 
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 shadow-xl mt-3">
+            <PhotoProvider>
+            <PhotoView  src={img}>
             <figure><img className='w-full' src={img} alt="" /></figure>
+            </PhotoView>
+            </PhotoProvider>
             <div className="card-body">
                 <h2 className="card-title text-2xl font-bold">{title}</h2>
                 <p className='text-xl font-bold'>Price: ${price}</p>
