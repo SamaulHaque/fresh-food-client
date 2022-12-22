@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import MyAllServicesCard from './MyAllServicesCard';
 
@@ -10,6 +11,11 @@ const MyAllServices = () => {
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
+
+    const {loading} = useContext(AuthContext)
+    if(loading){
+        return <h1 className='text-3xl text-secondary flex justify-center items-center font-bold mt-20'>L O A D I N G . . .</h1>
+    }
     return (
         <div className='mt-3 mx-3'>
             <h2 className='text-center text-3xl font-bold mb-8'>Here All Fresh Food Services</h2>
