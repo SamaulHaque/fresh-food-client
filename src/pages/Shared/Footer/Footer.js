@@ -8,7 +8,7 @@ const Footer = () => {
                 <p className="font-bold">
                     Fresh Food. <br />Providing Fresh Food since 2020.
                 </p>
-                <p>Copyright © 2022 - Fresh Food</p>
+                <p>Copyright © 2023 - Fresh Food</p>
             </div>
             <div>
                 <div className="grid grid-flow-col gap-4">
