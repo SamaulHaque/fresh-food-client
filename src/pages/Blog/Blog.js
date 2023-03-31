@@ -4,7 +4,9 @@ import useTitle from '../../hooks/useTitle';
 const Blog = () => {
     useTitle('Blog')
     return (
-        <div className='mb-6 mx-3'>
+        <div className='mb-6 mx-3'data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
             <h2 className='text-3xl font-semibold mt-3'>Difference between SQL and NoSQL</h2>
             <p className='text-justify'><b>SQL: </b> SQL or the Structured Query Language is the most common and popular programming language for the relational database management system. It is a language designed to extract, store, insert, delete, update and manage data for structured data and strategic analysis. SQL is widely used by top tech companies like Facebook, Whatsapp, etc for data processing solutions. It is used for different types of RDBMS including Oracle, MySQL, SQLServer, etc.</p> <br />
             <p className='text-justify'><b>NoSQL: </b> NoSQL database provides a mechanism for storage and retrieval of data that is modelled other than tabular form. It was introduced by Carl Stroz in the year 1998 called a Non-relational database. Now, it stands for Not only SQL. It is not limited to storing data in tables, instead, enables the big data to be stored in the structured, unstructured, semi-structured or polymorphic form.It is not limited to storing data in tables, instead, enables the big data to be stored in the structured, unstructured, semi-structured or polymorphic form.Companies like Twitter and Google, with a tremendous amount of data set like the user data of the social platforms, prefer to use NoSQL over any other RDBMS.  </p>

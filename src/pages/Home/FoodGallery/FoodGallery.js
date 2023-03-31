@@ -12,7 +12,9 @@ const FoodGallery = () => {
             <h2 className='text-center text-3xl font-bold'>Fresh Food Gallery</h2>
             <p className='text-center  text-xl'>See my food gallery and choose food  first and then order your favorite food.</p>
 
-            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
+            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8' data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500">
             <img className='w-full h-48 rounded' src={food1} alt="" />
             <img className='w-full h-48 rounded' src={food2} alt="" />
             <img className='w-full h-48 rounded' src={food3} alt="" />

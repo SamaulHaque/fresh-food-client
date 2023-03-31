@@ -10,10 +10,14 @@ const MyAllServicesCard = ({service}) => {
         <div className="card card-compact w-full bg-base-100 shadow-xl">
             <PhotoProvider>
             <PhotoView  src={img}>
-            <figure><img className='h-40 w-full' src={img} alt="" /></figure>
+            <figure data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"><img className='h-40 w-full' src={img} alt="" /></figure>
             </PhotoView>
             </PhotoProvider>
-            <div className="card-body">
+            <div className="card-body" data-aos="fade-up"
+             data-aos-easing="ease-out-cubic"
+             data-aos-duration="1000">
                 <h2 className="card-title text-2xl font-bold">{title}</h2>
                 <p className='text-xl font-bold'>Price: ${price}</p>
                 <p className='text-justify'>

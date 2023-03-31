@@ -6,8 +6,12 @@ const AboutMe = () => {
         <div>
             <div className="mb-12">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={aboutMe} className="max-w-sm rounded-lg shadow-2xl"  alt=''/>
-                    <div>
+                    <img src={aboutMe} className="max-w-sm rounded-lg shadow-2xl"  alt=''       data-aos="fade-up"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000"/>
+                    <div data-aos="fade-up"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">
                         <h1 className="text-3xl font-bold">About My Story</h1>
                         <p className="py-6 text-justify">Chemicals are essential building blocks for everything in the world. All living matter, including people, animals and plants, consists of chemicals. All food is made up of chemical substances. Chemicals in food are largely harmless and often desirable – for example, nutrients such as carbohydrates, protein, fat and fibre are composed of chemical compounds. Many of these occur naturally and contribute both to a rounded diet and to our eating experience.</p>
                         <p className='text-justify'>

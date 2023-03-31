@@ -7,7 +7,9 @@ const Payment = () => {
     return (
         <div>
             <h2 className='text-center text-3xl font-bold'>Payment With</h2>
-            <div className='mt-5 grid grid-cols-4 gap-6'>
+            <div className='mt-5 grid grid-cols-4 gap-6' data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500">
                 <img className='w-full h-24 rounded' src={payment1} alt="" />
                 <img className='w-full h-24 rounded' src={payment2} alt="" />
                 <img className='w-full h-24 rounded' src={payment3} alt="" />

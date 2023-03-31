@@ -45,7 +45,9 @@ const Login = () => {
   }
     return (
       <div>
-      <div className="hero card  w-2/4 mx-auto  shadow-2xl bg-base-100 my-12">
+      <div className="hero card  w-2/4 mx-auto  shadow-2xl bg-base-100 my-12" data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
         <div className="card-body">
           <form onSubmit={handelLogin}>
             <div className="form-control">
