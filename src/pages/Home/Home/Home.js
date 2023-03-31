@@ -6,6 +6,9 @@ import WhyChoose from '../WhyChoose/WhyChoose';
 import { Link } from 'react-router-dom';
 import useTitle from '../../../hooks/useTitle';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import Payment from '../Payment/Payment';
+import NutritionalBenefits from '../NutritionalBenefits/NutritionalBenefits';
+import AboutMe from '../AboutMe/AboutMe';
 
 const Home = () => {
     useTitle('Home')
@@ -21,7 +24,10 @@ const Home = () => {
             <Link to='/my-all-services'><button className='btn btn-outline' >See All Services</button></Link>
             </div>
             <WhyChoose></WhyChoose>
+            <NutritionalBenefits></NutritionalBenefits>
+            <AboutMe></AboutMe>
             <FoodGallery></FoodGallery>
+            <Payment></Payment>
         </div>
     );
 };
